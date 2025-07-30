@@ -68,7 +68,7 @@ def reading_bam(bam_file, motif, qscore_threshold=20, minimum=9):
 
 def plot_relative_histogram(values, sample):
 	plt.figure(figsize=(8, 5))
-	bins = range(min(values), max(values) - 10)
+	bins = range(min(values), max(values))
 	color = "#%06x" % random.randint(0, 0xFFFFFF)
 	counts, bins, patches = plt.hist(values, bins=bins, edgecolor='black', align='left', density=True, color=color)
 	for p in patches:
